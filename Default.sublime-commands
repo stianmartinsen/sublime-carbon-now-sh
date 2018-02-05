@@ -1,0 +1,6 @@
+[
+    {
+        "caption": "Send to carbon.now.sh",
+        "command": "carbon_now_sh"
+    }
+]
