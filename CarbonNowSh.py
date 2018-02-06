@@ -21,9 +21,16 @@ class CarbonNowShCommand(sublime_plugin.TextCommand):
         if selectedText:
             text = selectedText
 
+        settings = sublime.load_settings("Carbon.sublime-settings")
+
+        # Build config
+        config = {
+            't': settings.get('theme'),
+            'code': text
+        }
+
         # Build URL
-        url = "https://carbon.now.sh/?code="
-        url += urllib.parse.quote_plus(text)
+        url = "https://carbon.now.sh/?" + urllib.parse.urlencode(config)
 
         # Open browser
         webbrowser.open_new_tab(url)

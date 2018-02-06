@@ -1,0 +1,23 @@
+{
+    // Theme, select one of:
+	// 3024-night
+	// blackboard
+	// base16-dark
+	// base16-light
+	// cobalt
+	// dracula
+	// duotone-dark
+	// hopscotch
+	// material
+	// monokai
+	// oceanic-next
+	// panda-syntax
+	// paraiso-dark
+	// seti
+	// solarized dark
+	// solarized light
+	// twilight
+	// yeti
+	// zenburn
+    "theme": "monokai"
+}
