@@ -9,9 +9,13 @@ class CarbonNowShCommand(sublime_plugin.TextCommand):
         text = self.view.substr(reg)
 
         # Get selected text
-        sel = self.view.sel()
-        region1 = sel[0]
-        selectedText = self.view.substr(region1)
+        selectedText = ''
+
+        for selectedRegion in self.view.sel():
+            if not selectedRegion.empty():
+                selectedLines = self.view.lines(selectedRegion)
+                for line in selectedLines:
+                    selectedText += self.view.substr(line) + "\n"
 
         # Send only selected text if any
         if selectedText:
